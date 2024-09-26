@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "year": 1925,
+      "available": true
+    },
+    {
+      "id": "69",
+      "title": "The Great Book",
+      "author": "Mahesh Bhosale",
+      "year": 1111,
+      "available": true
+    }
+  ]
+}

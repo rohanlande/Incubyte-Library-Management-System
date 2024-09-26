@@ -1,15 +1,17 @@
-import express from "express";
-import {
-  addBook,
-
-} from "./controllers/libraryController";
+import express from 'express';
+import { addBook, } from './controllers/libraryController';
 
 const app = express();
+const port = 3000;
+
+// Middleware
 app.use(express.json());
 
-app.post("/books", addBook);
+// Routes
+app.post('/books', addBook);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+
+// Start server
+app.listen(port, () => {
+  console.log(`Library Management System is running on port ${port}`);
 });
