@@ -1,5 +1,5 @@
 import express from 'express';
-import { addBook, } from './controllers/libraryController';
+import { addBook, getAvailableBooks } from "./controllers/libraryController";
 
 const app = express();
 const port = 3000;
@@ -9,6 +9,7 @@ app.use(express.json());
 
 // Routes
 app.post('/books', addBook);
+app.get("/books", getAvailableBooks);
 
 
 // Start server
