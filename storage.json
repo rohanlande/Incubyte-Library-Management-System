@@ -12,7 +12,7 @@
       "title": "The Great Book",
       "author": "Mahesh Bhosale",
       "year": 1111,
-      "available": true
+      "available": false
     }
   ]
 }
