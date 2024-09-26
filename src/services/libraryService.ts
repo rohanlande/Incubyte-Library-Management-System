@@ -46,6 +46,16 @@ export class LibraryService {
     }
   }
 
+  returnBook(bookId: string): void {
+    const book = this.books.find((b) => b.id === bookId);
+    if (book && !book.available) {
+      book.available = true;
+      this.saveBooks(); // Save to the local storage after updating
+    } else {
+      throw new Error("Book was not borrowed or does not exist");
+    }
+  }
+
   getAvailableBooks(): Book[] {
     return this.books.filter((book) => book.available);
   }

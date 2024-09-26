@@ -2,6 +2,7 @@ import express from 'express';
 import {
   addBook,
   getAvailableBooks,
+  returnBook,
   borrowBook,
 } from "./controllers/libraryController" ;
 
@@ -13,9 +14,9 @@ app.use(express.json());
 
 // Routes
 app.post('/books', addBook);
-
 app.post("/books/:id/borrow", borrowBook);
 app.get("/books", getAvailableBooks);
+app.post("/books/:id/return", returnBook);
 
 
 // Start server
